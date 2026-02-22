@@ -59,7 +59,7 @@ buttonMessage.forEach(button => {
 // const userOnline = online //а тут мы указли что мы скопировали,и вставили их сюда,а взяли мы это значение из переменноц online
 // console.log(userOnline)
 
-// const arr1 = [1,2] 
+// const arr1 = [1,2]
 // const arr2 = [3,4]
 // const result = arr1.concat(arr2) //тут мы склеиваем как бы их вместе,То есть оно берет массив arr2 и приклеивает как бы к arr1
 //при это оно создает новый массив данных,не трогая старый,хз зачем такое можно юзать
@@ -80,4 +80,129 @@ buttonMessage.forEach(button => {
 // })// тут оно получается перебирает полностью массив,и выводит мне его в консоль по очереди
 //объясни мне пожалуйста за это forEach подробнее,ибо гпт и дипсак не может нормально это сделать
 
+//let arr = [12,23,34,35,4,32,123,235,867,5,5,3,2,2,1];//тут мы делаем массив,и можем искать в нем что-то
+//let result = arr.indexOf(10);//допустим если нам нужно конкретное число,мы вводим число,и оно показывает на какой позиции оно стоит
+//console.log(result);//если такого начения в массиве он не найдет,То он будет бить ошибку и будет выводить -1
+//если элементов несколько,он будет возвращать первый который нашел в массиве
+
+//const arr = ["misha","natalia","ura","fuck"]//Точно так же можно делать с буквами,но нужно полноценно вводить слово
+//const result = arr.indexOf("fuck")//если ввести начальную букву dопустим,оно будет бить ошибку -1
+//console.log (result)
+
+
+//const arr = [1,2,3,4,5,2,1,3,4,5]
+//const result = arr.indexOf(3,2)//тут мы указываем с какого идекса нам начинать поиск,в данном случае с индекса 2 ищи число 3
+//и оно выбивает нам 2,т.к у нас индекс числа 3 это 2
+// то есть поиск начинается так,найди мне чилсло (3) начиная с индекса (2)
+//console.log (result)
+
+//const arr = [1,2,3,4,5,6,1,8,9]
+//const result = arr.includes(1,3)//тут точно такая же логика,но оно будет выводить не индекс числа в массиве,а значение true или false
+//console.log (result)
+
+//const fruit = [1,2,3,2,1,2,3,4]//тут тоже самое что и было,только оно ищет с конца,а значит если мы напишет 2,то выведет оно
+// 5,потому что ищет с конца массива,и выводит первое что увидит похожее
+//const result = fruit.lastIndexOf(2)
+//console.log(result)
+
+//const user = [
+//  { id: 1, name: "Вася" },
+//{ id: 2, name: "Петя" },
+//{ id: 3, name: "Коля" }
+//]
+//const userOnline = user.find(function (item) {
+//  return item.id == 2
+//})
+//console.log(userOnline)//вроде понимаю зачем это,но очень тяжело дается все,где есть function,очень сложно понятно логику написанного
+
+// const user = [
+//     { id: 1, name: "Вася" },
+//     { id: 2, name: "Петя" },
+//     { id: 3, name: "КОля" }
+// ]
+// const userOnline = user.find(function (x) {
+//     return x.id == 2
+// })
+// console.log(userOnline)
+
+// const arr = [4,9,15,21,7]
+// const result = arr.find(function(x){
+//     return x > 10
+// })
+// console.log (result)
+
+// const numbers = [2, 4, 6, 8, 11, 14]
+// const result = numbers.find(function(n){
+//     return n % 2 == 1
+// })
+// console.log(result)
+
+// const users = [
+//   { id: 1, name: 'Anna', age: 17 },
+//   { id: 2, name: 'Ivan', age: 22 },
+//   { id: 3, name: 'Olga', age: 19 }
+// ];
+// const result = users.find(function(x){
+//     return x.age > 18
+// })
+// console.log (result)
+
+// const products = [
+//   { name: 'Laptop', price: 1000 },
+//   { name: 'Phone', price: 500 },
+//   { name: 'Tablet', price: 700 }
+// ]
+// const result = products.find(function(x){
+//     return x.name == 'Phone'
+// })
+// console.log(result)
+
+// const orders = [
+//   { id: 1, status: 'pending', total: 200 },
+//   { id: 2, status: 'completed', total: 150 },
+//   { id: 3, status: 'completed', total: 300 }
+// ]
+// const result = orders.find(function(x){
+//     return x.status == 'completed' && x.total > 200
+// })
+// console.log(result)
+
+// let arr = ["кот", "тигр", "лев"];
+
+// let result = arr.find(function(word) {
+//   return word.length > 3;
+// });
+
+// console.log(result);
+
+// const user = [
+//     {id: 1 , name:"Вася"},
+//     {id: 2 , name:"Петя"},
+//     {id: 3 , name:"Коля"}
+// ]
+// const result = user.filter (function(x){ //эта функция возвращает массив состоящий из нескольких элементов,
+//в то время как find находит только ближайший к поиску элемент в массиве
+//     return x.id < 3
+// })
+// console.log (result)
+
+// const lengths = ["Бильбо", "Гэндальф", "Назгул"]
+// const result = lengths.map(function(n){// map создает новый массив не трогая старый
+//     return n.length 
+// })
+// console.log (result)
+
+// const arr = ["Kot", "Sobaka", "Pes"]
+// const result = arr.map(function (n) {
+//     return n.length
+// })
+// console.log(result)
+
+let arr = [1, 3, 5];
+
+let result = arr.find(function(n) {
+  return n > 10;
+});
+
+console.log(result);
 
