@@ -1,0 +1,54 @@
+.calc-input {
+    gap: 10px;
+}
+
+.operator {
+    padding-top: 20px;
+    display: flex;
+    gap: 20px;
+    text-align: center;
+}
+
+.value1 {
+    background-color: black;
+    color: red;
+}
+
+.value2 {
+    background-color: orange;
+    color: aqua;
+    border-radius: 3px;
+}
+
+.result {
+    background-color: brown;
+    color:chartreuse;
+    border-radius: 30px;
+}
+
+.btn-plus {
+    color: red;
+    background-color: black;
+}
+
+.btn-minus {
+    color: blue;
+    background-color: black;
+}
+
+.btn-multiply {
+    background-color: black;
+    color: red;
+}
+
+.btn-divide {
+    background-color: black;
+    color: blue;
+}
+.calc-btn {
+    margin-top: 20px;
+    width: 30px;
+    height: 20px;
+    background-color: red;
+}
+
