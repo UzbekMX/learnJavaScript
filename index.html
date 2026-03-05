@@ -12,17 +12,17 @@
     <section>
         <div class="calc-input">
             <input class="value1" value="" type="number">
+            <select class="operator">
+                <option value="+" class="plus">+</option>
+                <option value="-" class="minus">-</option>
+                <option value="*" class="multiply">*</option>
+                <option value="/" class="divide">/</option>
+            </select>
             <input class="value2" value="" type="number">
             <button class="calc-btn">
                 =
             </button>
-            <input class="result" readonly type="number">
-        </div>
-        <div class="operator">
-            <button class="btn-plus">+</button>
-            <button class="btn-minus">-</button>
-            <button class="btn-multiply">*</button>
-            <button class="btn-divide">/</button>
+            <input class="result" readonly>
         </div>
     </section>
     <script src="./assets/script/script.js"></script>
