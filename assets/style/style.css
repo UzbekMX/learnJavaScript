@@ -49,3 +49,12 @@
     height: 20px;
     background-color: red;
 }
+
+.section-input {
+    padding-top: 20px;
+}
+
+.my-input {
+    background-color: aqua;
+    color: red;
+}

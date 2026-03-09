@@ -1,78 +1,59 @@
-const inputOne = document.getElementsByClassName("value1")
-const inputTwo = document.getElementsByClassName("value2")
-const value = parseInt(inputOne[0].value) + parseInt(inputTwo[0].value)
+const inputValueOne = document.querySelector(".value1")
+const inputValueTwo = document.querySelector(".value2")
 
-let operation = undefined
+const btnSum = document.querySelector(".calc-btn")
+
+let operation = "+"
 let sum = undefined
 let result = document.querySelector(".result")
 
 const operationElement = document.querySelector(".operator")
+operation = operationElement.value
 operationElement.addEventListener("change", () => {
     operation = operationElement.value
 })
 
-document.addEventListener('keydown', function (event) {
-    if (event.key === 'Enter') {
-        console.log('Enter key was pressed!')
-
+inputValueTwo.addEventListener('keydown', function (event) {
+    if (event.key === "Enter") {
+        operationsFunc()
     }
 })
-const inputValueOne = document.querySelector(".value1")
-inputValueOne.addEventListener('input', (event) => {
-    "numberOne", event.target.valueAsNumber
-})
 
-const inputValueTwo = document.querySelector(".value2")
-inputValueTwo.addEventListener("click", (event) => {
-    "numberTwo", event.target.valueAsNumber
-})
-
-
-let plus = document.querySelector(".plus")
-plus.addEventListener("click", function () {
-    operation = "+"
-})
-
-let minus = document.querySelector(".minus")
-minus.addEventListener("click", function () {
-    operation = "-"
-})
-
-let multiply = document.querySelector(".multiply")
-multiply.addEventListener("click", function () {
-    operation = "*"
-})
-
-let divide = document.querySelector(".divide")
-divide.addEventListener("click", function () {
-    operation = "/"
-})
-
-const btnSum = document.querySelector(".calc-btn")
 btnSum.addEventListener("click", () => {
+    operationsFunc()
+})
+
+function displayResult(sum) {
+    result.value = sum
+}
+
+function operationsFunc() {
     switch (operation) {
         case "+":
             sum = parseInt(inputValueOne.value) + parseInt(inputValueTwo.value)
-            result.value = sum
+            displayResult(sum)
             break
         case "-":
             sum = parseInt(inputValueOne.value) - parseInt(inputValueTwo.value)
-            result.value = sum
+            displayResult(sum)
             break
         case "*":
             sum = parseInt(inputValueOne.value) * parseInt(inputValueTwo.value)
-            result.value = sum
+            displayResult(sum)
             break
-        case "+":
+        case "/":
+            if (parseInt(inputValueTwo.value) === 0) {
+                result.value = "Иди нахуй,Долбоеб"
+                break
+            }
             sum = parseInt(inputValueOne.value) / parseInt(inputValueTwo.value)
-            result.value = sum
+            displayResult(sum)
             break
         default:
-            result.value = "Не выбранна операция"
+            displayResult("Не выбранна операция")
             break
     }
-})
-
+}
 
 
 
