@@ -43,7 +43,7 @@ function operationsFunc() {
             break
         case "/":
             if (parseInt(inputValueTwo.value) === 0) {
-                result.value = "Иди нахуй,Долбоеб"
+                result.value = "Деление на ноль невозможно"
                 break
             }
             sum = parseInt(inputValueOne.value) / parseInt(inputValueTwo.value)
