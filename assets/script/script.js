@@ -23,11 +23,11 @@ userInput.addEventListener('keydown', function (event) {
 
 
 
-const arrayEach = ["перекись", "круассаны", "апельсины", "яблоко", "банан"]
-let list = ""
-arrayEach.forEach((string) => {
-    list += string + "\n"
-})
+// const arrayEach = ["перекись", "круассаны", "апельсины", "яблоко", "банан"]
+// let list = ""
+// arrayEach.forEach((string) => {
+//     list += string + "\n"
+// })
 
 
 console.log(list)
