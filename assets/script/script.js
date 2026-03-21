@@ -1,6 +1,8 @@
 const userInput = document.querySelector(".user-input")
 const textArray = document.querySelector(".text-array")
+const clickBtn = document.querySelector(".click-operator")
 const array = []
+const arrayString = array
 
 
 userInput.addEventListener('keydown', function (event) {
@@ -8,28 +10,19 @@ userInput.addEventListener('keydown', function (event) {
         if (userInput.value !== "") {
             array.push(userInput.value)
             userInput.value = ""
-            const arrayString = array.join(",")
-            textArray.textContent = arrayString
         }
     }
 })
 
-
-
-
-
-
-
-
-
-
-// const arrayEach = ["перекись", "круассаны", "апельсины", "яблоко", "банан"]
-// let list = ""
-// arrayEach.forEach((string) => {
-//     list += string + "\n"
-// })
-
-
-console.log(list)
-
-
+clickBtn.addEventListener("click", () => {
+    let arrayList = ""
+    array.forEach((list, index) => {
+        if (index === array.length - 1) {
+            arrayList += list + "?"
+        }
+        else {
+            arrayList += list + ","
+        }
+    })
+    textArray.textContent = arrayList
+})
