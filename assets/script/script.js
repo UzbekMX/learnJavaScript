@@ -18,7 +18,7 @@ clickBtn.addEventListener("click", () => {
     let arrayList = ""
     array.forEach((list, index) => {
         if (index === array.length - 1) {
-            arrayList += list + "?"
+            arrayList += list + "Еблан?"
         }
         else {
             arrayList += list + ","
@@ -26,3 +26,28 @@ clickBtn.addEventListener("click", () => {
     })
     textArray.textContent = arrayList
 })
+
+
+
+
+
+
+// let userList = ""
+//             array.forEach((list) => {
+//                 userList += list + "1"
+//                 textArray.textContent = userList
+//             })
+
+
+
+
+
+
+// const arrayEach = ["перекись", "круассаны", "апельсины", "яблоко", "банан"]
+// let list = ""
+// arrayEach.forEach((string) => {
+//     list += string + "\n"
+// })
+
+
+//onsole.log(list)
